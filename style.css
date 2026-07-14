@@ -1,0 +1,390 @@
+/* ==========================
+   GOOGLE FONT & RESET
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.7;
+}
+
+/* ==========================
+   COLORS & VARIABLES
+========================== */
+:root {
+    --primary: #16a34a;
+    --primary-dark: #12853c;
+    --secondary: #2563eb;
+    --dark: #1f2937;
+    --light: #f8f9fa;
+    --white: #ffffff;
+}
+
+/* ==========================
+   HEADER / NAVBAR
+========================== */
+.header {
+    z-index: 999;
+}
+
+.navbar {
+    padding: 15px 0;
+    transition: 0.3s;
+    background-color: #ffffff !important;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 18px;
+    color: #333 !important;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("images/greenleave.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    color: #1f5d21;
+    line-height: 1.2;
+}
+
+.hero-img {
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+.btn {
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-success {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-success:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-success {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* ==========================
+   FEATURES / SERVICES SECTION
+========================== */
+.features {
+    background: linear-gradient(rgba(248, 249, 250, 0.95), rgba(248, 249, 250, 0.95)), url("images/greenleave.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+}
+
+.feature-box {
+    background: var(--white);
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #f1f1f1;
+}
+
+.feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.feature-box i {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    color: var(--primary);
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.feature-box .icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.feature-box h5 {
+    font-weight: 700;
+    color: #1f5d21;
+    margin-bottom: 12px;
+}
+
+.feature-box p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* ==========================
+   PRODUCT CARDS & CATEGORIES
+========================== */
+.category-card, .product-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.35s ease;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card img, .product-card img {
+    transition: transform 0.4s ease;
+}
+
+.category-card:hover, .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.category-card:hover img, .product-card:hover img {
+    transform: scale(1.06);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.rating {
+    margin: 10px 0;
+    color: #FFC107;
+    font-size: 16px;
+}
+
+/* ==========================
+   SEARCH & FORM CONTROL
+========================== */
+.form-control {
+    height: 52px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    padding-left: 20px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(22,163,74,0.15);
+}
+
+/* ==========================
+   ABOUT SECTION
+========================== */
+.about img {
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   TESTIMONIALS
+========================== */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   NEWSLETTER
+========================== */
+.newsletter input {
+    max-width: 350px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.footer {
+    background: #111827;
+    color: #fff;
+}
+
+.footer h3 {
+    color: var(--primary);
+}
+
+.footer a {
+    color: #9ca3af;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.footer hr {
+    border-color: #374151;
+}
+
+/* ==========================
+   WHATSAPP & BACK TO TOP
+========================== */
+/* back to top handled easily via Bootstrap layout/custom rules */
+#backToTop:hover {
+    transform: scale(1.1) translateY(-3px);
+}
+
+/* ==========================
+   LOADING SCREEN
+========================== */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-content h1 {
+    color: var(--primary);
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.loader-hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+@media (max-width: 991px) {
+    .hero {
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+    .hero p {
+        margin: 20px auto;
+    }
+    .hero-img {
+        margin-top: 40px;
+        max-height: 350px !important;
+    }
+    .about {
+        text-align: center;
+    }
+    .about img {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-btns .btn {
+        margin-left: 0 !important;
+    }
+}

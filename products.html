@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROZIX | Our Products</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-success" href="index.html">
+                    ROZIX
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="hero d-flex align-items-center justify-content-center text-center" style="min-height: 40vh; padding-top: 100px;">
+        <div class="container">
+            <h1 class="fw-bold display-4">Our Products</h1>
+            <p class="lead text-muted">
+                Premium cleaning products designed for modern homes.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS & FILTER SECTION ===== -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            
+            <!-- Search & Filter (Moved Up for Premium UX) -->
+            <div class="row mb-5 g-3">
+                <div class="col-lg-6">
+                    <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Search Products...">
+                </div>
+                <div class="col-lg-6">
+                    <select class="form-select form-control-lg" style="height: 52px; border-radius: 30px;">
+                        <option selected>All Categories</option>
+                        <option>Floor Cleaner</option>
+                        <option>Toilet Cleaner</option>
+                        <option>Glass Cleaner</option>
+                        <option>Dishwash Liquid</option>
+                        <option>Laundry Detergent</option>
+                        <option>Hand Wash</option>
+                        <option>Liquid Soap</option>
+                        <option>Bar Soap</option>
+                        <option>Fabric Softener</option>
+                        <option>Bleach</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row g-4">
+                
+                <!-- Product 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <span class="product-badge">Best Seller</span>
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/floor.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Floor Cleaner">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Floor Cleaner</h4>
+                        <p class="text-muted small">Powerful cleaning with a long-lasting fresh fragrance.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <span class="product-badge">Popular</span>
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/toilet.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Toilet Cleaner">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Toilet Cleaner</h4>
+                        <p class="text-muted small">Removes tough stains and helps keep toilets hygienically clean.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/glass.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Glass Cleaner">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Glass Cleaner</h4>
+                        <p class="text-muted small">Crystal-clear shine with a streak-free finish for glass surfaces.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <span class="product-badge">Best Seller</span>
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/dishwash.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Dishwash Liquid">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Dishwash Liquid</h4>
+                        <p class="text-muted small">Cuts through grease easily while remaining gentle on hands.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/laundry.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Laundry Detergent">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Laundry Detergent</h4>
+                        <p class="text-muted small">Deep cleaning formula for brighter, fresher and cleaner clothes.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/handwash.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Hand Wash">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Hand Wash</h4>
+                        <p class="text-muted small">Gentle cleansing with a refreshing fragrance for everyday use.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/liquid-soap.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Liquid Soap">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Liquid Soap</h4>
+                        <p class="text-muted small">Soft on hands with rich foam and a refreshing fragrance.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/bar-soap.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Bar Soap">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Bar Soap</h4>
+                        <p class="text-muted small">Daily freshness with a smooth and gentle cleansing formula.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/fabric-softener.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Fabric Softener">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Fabric Softener</h4>
+                        <p class="text-muted small">Keeps clothes soft, fresh and easy to iron.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/bleach.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Bleach">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Bleach</h4>
+                        <p class="text-muted small">Powerful whitening and disinfecting for household cleaning.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                        <img src="images/multi puropse.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="Multi Purpose Cleaner">
+                        <div class="rating">★★★★★</div>
+                        <h4 class="fw-bold">ROZIX Multi-Purpose</h4>
+                        <p class="text-muted small">One solution for kitchens, bathrooms and everyday surfaces.</p>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="product-details.html" class="btn btn-success">View Details</a>
+                            <a href="contact.html" class="btn btn-outline-success">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12 (Coming Soon - Cleaned Up) -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card p-4 border rounded bg-light h-100 text-center d-flex flex-column justify-content-center align-items-center" style="min-height: 350px;">
+                        <span class="product-badge bg-secondary">New</span>
+                        <img src="images/coming-soon.png" class="img-fluid mb-3" style="height: 120px; object-fit: contain;" alt="Coming Soon">
+                        <h4 class="fw-bold text-muted">More Products</h4>
+                        <p class="text-muted small">Exciting new ROZIX home care products are coming soon.</p>
+                        <button class="btn btn-outline-secondary mt-2 w-100" disabled>Coming Soon</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer bg-dark text-white pt-5 pb-3 border-top border-secondary">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="fw-bold text-success">ROZIX</h3>
+                    <p class="text-muted mt-3">
+                        Premium Home Care Products for a cleaner, healthier and happier lifestyle.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-secondary text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-secondary text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-secondary text-decoration-none">Products</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-secondary text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <p class="text-muted mb-2"><i class="fas fa-envelope text-success me-2"></i> info@rozix.com</p>
+                    <p class="text-muted mb-2"><i class="fas fa-phone text-success me-2"></i> +92 XXX XXXXXXX</p>
+                    <p class="text-muted mb-2"><i class="fas fa-map-marker-alt text-success me-2"></i> Rawalpindi, Pakistan</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center text-muted">
+                © 2026 ROZIX. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+
+    <!-- Back To Top Button -->
+    <button id="backToTop" title="Go to top" class="btn btn-success" style="position: fixed; bottom: 90px; right: 20px; border-radius: 50%; width: 50px; height: 50px; font-size: 20px; z-index: 999;">
+        ↑
+    </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923001234567" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;text-decoration:none;z-index:9999;font-size:30px;display:flex;align-items:center;justify-content:center;box-shadow: 0px 4px 10px rgba(0,0,0,0.3);" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>

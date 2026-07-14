@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROZIX | Premium Home Care Products</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <h1>ROZIX</h1>
+            <p>Premium Home Care Products</p>
+        </div>
+    </div>
+
+    <!-- ===== Header ===== -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-2 text-success" href="index.html">
+                    ROZIX
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section class="hero d-flex align-items-center" style="min-height: 100vh; padding-top: 100px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Side -->
+                <div class="col-lg-6">
+                    <h1 class="fw-bold display-4">
+                        Smart Cleaning,<br>
+                        <span class="text-success">Healthy Living.</span>
+                    </h1>
+                    <p class="lead text-muted my-4">
+                        ROZIX delivers premium home care products designed to keep every home fresh, clean and protected every day.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="products.html" class="btn btn-success btn-lg px-4 me-2">Explore Products</a>
+                        <a href="contact.html" class="btn btn-outline-dark btn-lg px-4">Contact Us</a>
+                    </div>
+                </div>
+                <!-- Right Side -->
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                    <img src="images/bottles.png" class="img-fluid hero-img" alt="ROZIX Products" style="max-height: 450px; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Features Section ===== -->
+    <section class="features py-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box p-4 border rounded shadow-sm bg-white h-100">
+                        <i class="fas fa-leaf text-success fs-2 mb-3"></i>
+                        <h5 class="fw-bold">Eco-Friendly</h5>
+                        <p class="text-muted mb-0">Safe for your home and the environment</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box p-4 border rounded shadow-sm bg-white h-100">
+                        <i class="fas fa-shield-alt text-success fs-2 mb-3"></i>
+                        <h5 class="fw-bold">Powerful Cleaning</h5>
+                        <p class="text-muted mb-0">Tough on dirt, gentle on surfaces</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box p-4 border rounded shadow-sm bg-white h-100">
+                        <i class="fas fa-home text-success fs-2 mb-3"></i>
+                        <h5 class="fw-bold">Trusted Protection</h5>
+                        <p class="text-muted mb-0">Keeping your home safe and healthy</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box p-4 border rounded shadow-sm bg-white h-100">
+                        <i class="fas fa-thumbs-up text-success fs-2 mb-3"></i>
+                        <h5 class="fw-bold">Quality Assured</h5>
+                        <p class="text-muted mb-0">Premium products you can rely on</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Product Categories ===== -->
+    <section id="product" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Categories</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <input type="text" id="searchInput" class="form-control form-control-lg my-3" placeholder="Search products...">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card text-center p-4 border rounded shadow-sm bg-white h-100">
+                        <img src="images/floor.jpeg" class="img-fluid mb-3" style="height: 100px; object-fit: contain;" alt="Floor Cleaner">
+                        <h5 class="fw-bold">Floor Cleaner</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card text-center p-4 border rounded shadow-sm bg-white h-100">
+                        <img src="images/toilet.jpeg" class="img-fluid mb-3" style="height: 100px; object-fit: contain;" alt="Toilet Cleaner">
+                        <h5 class="fw-bold">Toilet Cleaner</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card text-center p-4 border rounded shadow-sm bg-white h-100">
+                        <img src="images/glass.jpeg" class="img-fluid mb-3" style="height: 100px; object-fit: contain;" alt="Glass Cleaner">
+                        <h5 class="fw-bold">Glass Cleaner</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card text-center p-4 border rounded shadow-sm bg-white h-100">
+                        <img src="images/dishwash.jpeg" class="img-fluid mb-3" style="height: 100px; object-fit: contain;" alt="Dishwash Liquid">
+                        <h5 class="fw-bold">Dishwash Liquid</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Featured Products ===== -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Featured Products</h2>
+                <p class="text-muted">Premium quality products made for every home.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <img src="images/floor.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="ROZIX Floor Cleaner">
+                        <h4 class="fw-bold mt-3">ROZIX Floor Cleaner</h4>
+                        <p class="text-muted">Powerful cleaning with long lasting freshness.</p>
+                        <a href="products.html" class="btn btn-success px-4">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <img src="images/dishwash.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="ROZIX Dishwash Liquid">
+                        <h4 class="fw-bold mt-3">ROZIX Dishwash Liquid</h4>
+                        <p class="text-muted">Removes grease easily while caring for your hands.</p>
+                        <a href="products.html" class="btn btn-success px-4">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="product-card p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <!-- Corrected spelling for laundry image -->
+                        <img src="images/laundry.jpeg" class="img-fluid mb-3" style="height: 200px; object-fit: contain;" alt="ROZIX Laundry Detergent">
+                        <h4 class="fw-bold mt-3">ROZIX Laundry Detergent</h4>
+                        <p class="text-muted">Deep cleaning with bright and fresh clothes.</p>
+                        <a href="products.html" class="btn btn-success px-4">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Why Choose ROZIX ===== -->
+    <section class="why-choose py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Why Choose ROZIX?</h2>
+                <p class="text-muted">Your trusted partner for premium home care solutions.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box text-center p-4 border rounded shadow-sm bg-white h-100">
+                        <div class="icon fs-1 mb-3">⭐</div>
+                        <h5 class="fw-bold">Premium Quality</h5>
+                        <p class="text-muted mb-0">High-quality products made with carefully selected ingredients.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box text-center p-4 border rounded shadow-sm bg-white h-100">
+                        <div class="icon fs-1 mb-3">🌿</div>
+                        <h5 class="fw-bold">Fresh Fragrance</h5>
+                        <p class="text-muted mb-0">Long-lasting freshness that keeps every room smelling clean.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box text-center p-4 border rounded shadow-sm bg-white h-100">
+                        <div class="icon fs-1 mb-3">🛡️</div>
+                        <h5 class="fw-bold">Effective Cleaning</h5>
+                        <p class="text-muted mb-0">Powerful formulas that remove dirt, stains and germs.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box text-center p-4 border rounded shadow-sm bg-white h-100">
+                        <div class="icon fs-1 mb-3">💚</div>
+                        <h5 class="fw-bold">Trusted Brand</h5>
+                        <p class="text-muted mb-0">Designed to make everyday cleaning simple, safe and reliable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== About ROZIX ===== -->
+    <section class="about py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/About.jpeg" class="img-fluid rounded shadow" alt="About ROZIX">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">About ROZIX</h2>
+                    <p class="text-muted">
+                        ROZIX is committed to providing premium home care and cleaning products that combine quality, performance and freshness.
+                    </p>
+                    <p class="text-muted">
+                        From floor cleaners and laundry detergents to dishwashing liquids and soaps, our goal is to make every home cleaner, healthier and more comfortable.
+                    </p>
+                    <a href="about.html" class="btn btn-success px-4 mt-3">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Testimonials Section ===== -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">What Our Customers Say</h2>
+                <p class="text-muted">Trusted by customers across Pakistan.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm p-4 text-center border-0 bg-light">
+                        <div class="text-warning fs-4 mb-2">⭐⭐⭐⭐⭐</div>
+                        <p class="text-muted italic">"The quality of ROZIX products is excellent. Highly recommended."</p>
+                        <h6 class="fw-bold mt-3">- Ali Khan</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm p-4 text-center border-0 bg-light">
+                        <div class="text-warning fs-4 mb-2">⭐⭐⭐⭐⭐</div>
+                        <p class="text-muted italic">"Very effective cleaning products with amazing fragrance."</p>
+                        <h6 class="fw-bold mt-3">- Ayesha Ahmed</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm p-4 text-center border-0 bg-light">
+                        <div class="text-warning fs-4 mb-2">⭐⭐⭐⭐⭐</div>
+                        <p class="text-muted italic">"Professional company with premium quality products."</p>
+                        <h6 class="fw-bold mt-3">- Muhammad Usman</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </</section>
+
+    <!-- ===== Newsletter Section ===== -->
+    <section class="newsletter py-5 bg-success text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold">Subscribe to Our Newsletter</h2>
+            <p class="mb-4">Get updates about our latest products and offers.</p>
+            <form class="row justify-content-center g-2">
+                <div class="col-auto">
+                    <input type="email" class="form-control form-control-lg" placeholder="Enter your email" required>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-light btn-lg text-success fw-bold">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== Call To Action ===== -->
+    <section class="cta py-5 text-center bg-dark text-white">
+        <div class="container">
+            <h2 class="fw-bold">Ready to Experience Better Cleaning?</h2>
+            <p class="lead mt-3 text-muted">Explore our premium cleaning products and discover the ROZIX difference.</p>
+            <a href="products.html" class="btn btn-success btn-lg mt-3 px-5">Explore Products</a>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer bg-dark text-white pt-5 pb-3 border-top border-secondary">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="fw-bold text-success">ROZIX</h3>
+                    <p class="text-muted mt-3">
+                        Premium Home Care Products for a cleaner, healthier and happier lifestyle.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-secondary text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-secondary text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-secondary text-decoration-none">Products</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-secondary text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3 text-white">Contact</h5>
+                    <p class="text-muted mb-2"><i class="fas fa-envelope text-success me-2"></i> info@rozix.com</p>
+                    <p class="text-muted mb-2"><i class="fas fa-phone text-success me-2"></i> +92 XXX XXXXXXX</p>
+                    <p class="text-muted mb-2"><i class="fas fa-map-marker-alt text-success me-2"></i> Rawalpindi, Pakistan</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center text-muted">
+                © 2026 ROZIX. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+
+    <!-- Back To Top Button -->
+    <button id="backToTop" title="Go to top" class="btn btn-success" style="position: fixed; bottom: 90px; right: 20px; border-radius: 50%; width: 50px; height: 50px; font-size: 20px; z-index: 999;">
+        ↑
+    </button>
+
+    <!-- WhatsApp Chat Floating Button -->
+    <a href="https://wa.me/923001234567" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;text-decoration:none;z-index:9999;font-size:30px;display:flex;align-items:center;justify-content:center;box-shadow: 0px 4px 10px rgba(0,0,0,0.3);" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
