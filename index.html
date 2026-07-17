@@ -366,5 +366,114 @@
     <a href="https://wa.me/923001234567" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;text-decoration:none;z-index:9999;font-size:30px;display:flex;align-items:center;justify-content:center;box-shadow: 0px 4px 10px rgba(0,0,0,0.3);" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <!-- AI Chatbot UI -->
+<div id="chatbot-launcher" onclick="toggleChat()" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: #007bff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s;">
+    💬
+</div>
+
+<div id="chatbot-box" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 350px; height: 450px; background: white; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); flex-direction: column; z-index: 1000; font-family: sans-serif; overflow: hidden; border: 1px solid #e0e0e0;">
+    <!-- Header -->
+    <div style="background: #007bff; color: white; padding: 15px; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+        <span>Rozix AI Assistant</span>
+        <span onclick="toggleChat()" style="cursor: pointer; font-size: 20px;">×</span>
+    </div>
+    
+    <!-- Messages Area -->
+    <div id="chat-messages" style="flex: 1; padding: 15px; overflow-y: auto; background: #f9f9f9; display: flex; flex-direction: column; gap: 10px;">
+        <div style="background: #e9ecef; color: #333; padding: 8px 12px; border-radius: 15px; align-self: flex-start; max-width: 80%; font-size: 14px;">
+            Assalam-o-Alaikum! Main Rozix AI Assistant hoon. Main aapki kya madad kar sakta hoon?
+        </div>
+    </div>
+    
+    <!-- Input Area -->
+    <div style="padding: 10px; border-top: 1px solid #eee; display: flex; gap: 5px; background: white;">
+        <input type="text" id="chat-input" placeholder="Type a message..." style="flex: 1; padding: 8px 12px; border: 1px solid #ccc; border-radius: 20px; outline: none; font-size: 14px;" onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()" style="background: #007bff; color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-weight: bold;">Send</button>
+    </div>
+</div>
+
+<script>
+function toggleChat() {
+    const chatBox = document.getElementById('chatbot-box');
+    const launcher = document.getElementById('chatbot-launcher');
+    if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+        chatBox.style.display = 'flex';
+        launcher.style.transform = 'rotate(90deg)';
+    } else {
+        chatBox.style.display = 'none';
+        launcher.style.transform = 'rotate(0deg)';
+    }
+}
+
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+}
+
+async function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const messageText = input.value.trim();
+    if (!messageText) return;
+
+    // 1. User ka message screen par show karen
+    appendMessage(messageText, 'user');
+    input.value = '';
+
+    // 2. Loading state show karen
+    const loadingId = appendMessage('Thinking...', 'bot', true);
+
+    try {
+        // Hum direct Netlify backend function ko call karenge taake API Key mehfooz rahe
+        const response = await fetch('/.netlify/functions/chatbot', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: messageText })
+        });
+
+        const data = await response.json();
+        
+        // Loading mita kar actual reply show karen
+        document.getElementById(loadingId).remove();
+        appendMessage(data.reply, 'bot');
+    } catch (error) {
+        document.getElementById(loadingId).remove();
+        appendMessage("Sorry, connection error. Please try again.", 'bot');
+    }
+}
+
+function appendMessage(text, sender, isLoading = false) {
+    const messagesContainer = document.getElementById('chat-messages');
+    const messageDiv = document.createElement('div');
+    const id = 'msg-' + Date.now();
+    messageDiv.id = id;
+    
+    // Style settings based on sender
+    messageDiv.style.padding = '8px 12px';
+    messageDiv.style.borderRadius = '15px';
+    messageDiv.style.maxWidth = '80%';
+    messageDiv.style.fontSize = '14px';
+    messageDiv.style.wordBreak = 'break-word';
+
+    if (sender === 'user') {
+        messageDiv.style.background = '#007bff';
+        messageDiv.style.color = 'white';
+        messageDiv.style.alignSelf = 'flex-end';
+    } else {
+        messageDiv.style.background = '#e9ecef';
+        messageDiv.style.color = '#333';
+        messageDiv.style.alignSelf = 'flex-start';
+        if (isLoading) {
+            messageDiv.style.fontStyle = 'italic';
+            messageDiv.style.color = '#888';
+        }
+    }
+
+    messageDiv.innerText = text;
+    messagesContainer.appendChild(messageDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    return id;
+}
+</script>
 </body>
 </html>
